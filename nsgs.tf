@@ -93,8 +93,9 @@ resource "azurerm_network_security_group" "nic_ubuntu" {
   name="nic_ubuntu"
   location = azurerm_resource_group.nsgs.location
   tags = azurerm_resource_group.nsgs.tags
+  resource_group_name = " azurerm_resource_group.nsgs.name"
 
-  security_rule = [ {
+  security_rule = {
     access = "Allow"
     description = "The SSH rule to nic_ubuntu"
     destination_address_prefix = "*"
@@ -105,5 +106,5 @@ resource "azurerm_network_security_group" "nic_ubuntu" {
     protocol = "Tcp"
     source_address_prefix = "*"
     source_port_range = "*"
-  } ]
+  } 
 }

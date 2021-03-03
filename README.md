@@ -1,4 +1,4 @@
 # terraform-labs
 
-Lab files for Olufemi terraform-workship.
+Lab files for Olufemi repo terraform-workship.
 

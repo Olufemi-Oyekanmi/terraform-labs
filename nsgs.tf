@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "nsgs" {
 resource "azurerm_network_security_group" "resource_group_default" {
     name = "ResourceGroupDefault"
     resource_group_name = "${azurerm_resource_group.nsgs.name}"
-    location = "${var.loc}"
+    location = "${azure_resource_group.nsgs.loc}"
     tags = "${azurerm_resource_group.nsgs.tags}"  
 }
 

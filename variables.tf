@@ -8,7 +8,7 @@ variable "loc" {
 }
 
 variable "tags" {
-  type = "map"
+
   default = {
       source = "citadel"
       env = "training"

@@ -1,7 +1,10 @@
 resource "azurerm_resource_group" "nsgs" {
     name = "NSGs"
-    location = "${var.loc}"
-    tags = "${var.tags}"  
+    location = "West Europe"
+    tags = {
+      source = "citadel"
+      env = "training"
+  }  
 }
 
 resource "azurerm_network_security_group" "resource_group_default" {
